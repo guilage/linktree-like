@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    --bg-color: #041340;
-    --text-color:white;
-    --primary-color: white;
-    --primary-color-dark: #EB4747;
-}
-
 body {
     background: var(--bg-color);
     color: var(--text-color);
@@ -22,16 +15,18 @@ body {
 
 body.dark {
     --bg-color: #041340;
-    --text-color:black;
+    --primary-text-color: white;
+    --secundary-text-color: black;
     --primary-color: white;
     --primary-color-dark: #EB4747;
 }
 
-body.pink {
-    --bg-color: #ffc300;
-    --text-color:white; 
-    --primary-color: #c70039;
-    --primary-color-dark: #571845;
+body.bright {
+    --bg-color: white;
+    --primary-text-color: #1038a4;
+    --secundary-text-color: black;
+    --primary-color: #a0b4e9;
+    --primary-color-dark: #1038a4;
 }
 
 .container {
@@ -54,13 +49,13 @@ img {
 h1 {
     margin-top: 10px;
     margin-bottom: 5px;
-    color: white;
+    color: var(--primary-text-color);
 }
 
 p {
     margin-bottom: 40px;
     font-weight: 1px;
-    color: white;
+    color: var(--primary-text-color);
  }
 
 ul li a {
@@ -71,7 +66,7 @@ ul li a {
     margin-bottom: 15px;
     background: var(--primary-color);
     border-radius: 25px;
-    color: var(--text-color);
+    color: var(--secundary-text-color);
     transition: color 300ms, background 500ms;
 } 
 
@@ -85,7 +80,7 @@ a {
 
 ul li a:hover {
     background: var(--primary-color-dark);
-    color:white; 
+    color:var(--primary-color); 
     border: 2px var(--primary-color) solid;
 }
 
@@ -99,7 +94,7 @@ ul li a:hover svg {
 
 footer {
     font-style: italic;
-    color: var(--primary-color);
+    color: var(--primary-text-color);
     opacity: 0.5;
     transition: opacity 400ms, color 400ms, bold 100ms;
     font-size: 13px;
